@@ -1,0 +1,16 @@
+name: Start when user try to push or pull
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  test-push:
+   runs-on: ubuntu-latest
+
+   steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Composer dump autoload
+        run: composer dump-autoload
