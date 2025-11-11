@@ -2,15 +2,25 @@ name: Start when user try to push or pull
 
 on:
   push:
-    branches: [main]
+    branches:
+    - main
+    - "release/**"
+    paths:
+    - "src/**"
+    - "vendor/**"
+
+  pull_request:
+    branches:
+    - main
+    - "release/**"
 
 jobs:
   test-push:
-   runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-   steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-      - name: Run Composer dump autoload
-        run: composer dump-autoload
+    - name: Run Composer dump autoload
+      run: composer dump-autoload
