@@ -6,12 +6,15 @@ on:
 
 
 jobs:
-  deploy:
+  test-first-job:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Print Welcome Message
+      run : echo "Welcome from first workflow."
+      
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Print Welcome Message
-      run : echo "Welcome from first workflow."
+    - name: List Repo Files
+      run: ls -la
