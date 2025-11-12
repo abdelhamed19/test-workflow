@@ -1,0 +1,9 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  run-manual-workflow:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print Welcome Message
+      run : echo "Welcome from manual workflow."
