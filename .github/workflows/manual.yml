@@ -15,4 +15,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Print Welcome Message
-      run : echo "Welcome from manual workflow."
+      run : echo "Welcome from manual workflow on ${{ inputs.environment }}."
