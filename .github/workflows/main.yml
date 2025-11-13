@@ -22,4 +22,4 @@ jobs:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
-            Done
+            Pipeline is working, code pushed to repo, and Pulled to server Successfully
