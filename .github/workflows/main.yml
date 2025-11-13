@@ -16,5 +16,13 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: List Repo Files
-      run: ls -la
+    - name: Notify on Telegram
+      uses: appleboy/telegram-action@v0.1.1
+      with:
+          to: 328367738
+          token: 8549887924:AAF4gdz5sxRssNLo50YD_6sc2dOfWTr7bG0
+          message: |
+            ✅ تم نشر المشروع بنجاح على السيرفر!
+            الفرع: ${{ github.ref_name }}
+            بواسطة: ${{ github.actor }}
+            📅 التاريخ: ${{ github.event.head_commit.timestamp }}
