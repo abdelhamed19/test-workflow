@@ -19,8 +19,8 @@ jobs:
     - name: Notify on Telegram
       uses: appleboy/telegram-action@v0.1.1
       with:
-          to: 328367738
-          token: 8549887924:AAF4gdz5sxRssNLo50YD_6sc2dOfWTr7bG0
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
             ✅ تم نشر المشروع بنجاح على السيرفر!
             الفرع: ${{ github.ref_name }}
