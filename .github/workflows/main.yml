@@ -10,16 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Print Welcome Message
-      run : echo "Welcome from first workflow."
       
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Notify on Telegram
-      uses: appleboy/telegram-action@v0.1.1
-      with:
-          to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          message: |
-           😎 المواسير كله تمام 
+    # - name: Notify on Telegram
+    #   uses: appleboy/telegram-action@v0.1.1
+    #   with:
+    #       to: ${{ secrets.TELEGRAM_CHAT_ID }}
+    #       token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+    #       message: |
+    #        😎 المواسير كله تمام 
